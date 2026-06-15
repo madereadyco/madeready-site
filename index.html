@@ -80,7 +80,7 @@
       --status-live: #16a34a;
       --status-build: #C05000;
       --paper-alt:   #FFF9EE;
-      --portrait-name-color: var(--ink);
+      --portrait-name-color: #C060A0;
       --ghost-border: var(--rule);
     }
 
@@ -163,6 +163,9 @@
       color: var(--ink);
       display: flex;
       align-items: center;
+    }
+    .nav__logo > .accent {
+      color: var(--accent);
     }
     /* Co mark — colour driven by CSS var */
     .co-mark {
@@ -568,6 +571,9 @@
       display: flex;
       align-items: center;
     }
+    .footer__brand > .accent {
+      color: var(--accent);
+    }
     .footer__contact {
       display: flex;
       flex-direction: column;
@@ -595,7 +601,7 @@
     <div class="container nav__inner">
 
       <a href="/" class="nav__logo" aria-label="Made Ready Co home">
-        Made Ready <span class="accent">Co</span>
+        Made Ready&nbsp;<span class="accent">Co</span>
       </a>
 
       <nav aria-label="Primary">
@@ -838,7 +844,7 @@
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
       <p class="footer__brand">
-         Made Ready <span class="accent">Co</span>
+         Made Ready&nbsp;<span class="accent">Co</span>
       </p>
       <div class="footer__contact">
         <a href="mailto:roland@madeready.co">roland@madeready.co</a>
