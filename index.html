@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Made Ready Co — Digital products worth paying for</title>
+  <meta name="description" content="Made Ready Co is a small digital product studio making tools for people who care about craft. UK budget tracking, premium React components, and more." />
+
+  <!-- OG -->
+  <meta property="og:title" content="Made Ready Co" />
+  <meta property="og:description" content="Digital products worth paying for." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://madeready.co" />
+
+  <!-- Fonts: Plus Jakarta Sans, weights 400/500/700/800 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:    #F8F8F6;
+      --ink:      #1A1A18;
+      --ink-mid:  #4A4A46;
+      --ink-soft: #8A8A84;
+      --rule:     #E4E4DF;
+      --indigo:   #4F46E5;
+      --indigo-2: #EEF2FF;
+      --amber:    #F59E0B;
+
+      --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+      --max: 1160px;
+      --pad-x: clamp(1.25rem, 5vw, 4rem);
+      --section-gap: clamp(5rem, 10vw, 9rem);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img, svg { display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Utility ──────────────────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--pad-x);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--indigo);
+    }
+
+    /* Fade-up reveal — JS adds .visible */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ── Nav ──────────────────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: color-mix(in srgb, var(--white) 80%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.3s;
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .nav__logo {
+      font-size: 0.9375rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .nav__logo span {
+      color: var(--indigo);
+    }
+    /* The Co mark SVG — sized to cap-height, scales with font */
+    .nav__logo .co-mark {
+      display: inline-block;
+      height: 1.2rem;
+      width: auto;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+      margin-left: 0.1rem;
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav__links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      transition: color 0.2s;
+    }
+    .nav__links a:hover { color: var(--ink); }
+
+    .nav__cta {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--indigo) !important;
+      border: 1.5px solid var(--indigo);
+      border-radius: 6px;
+      padding: 0.4rem 0.9rem;
+      transition: background 0.18s, color 0.18s !important;
+    }
+    .nav__cta:hover {
+      background: var(--indigo);
+      color: #fff !important;
+    }
+
+    @media (max-width: 640px) {
+      .nav__links { display: none; }
+    }
+
+    /* ── Hero ─────────────────────────────────────────────────────────────── */
+    .hero {
+      padding-top: calc(56px + clamp(4rem, 8vw, 7rem));
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+    }
+
+    .hero__kicker {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__headline {
+      font-size: clamp(2.4rem, 6.5vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      max-width: 14ch;
+    }
+
+    .hero__headline .accent {
+      color: var(--indigo);
+      display: block;
+      padding-left: clamp(1.5rem, 5vw, 5rem); /* the signature offset */
+    }
+
+    .hero__sub {
+      margin-top: 2rem;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      line-height: 1.7;
+      color: var(--ink-mid);
+      max-width: 46ch;
+    }
+
+    .hero__actions {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--sans);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.18s cubic-bezier(0.34,1.56,0.64,1),
+                  box-shadow 0.18s ease,
+                  background 0.18s;
+      text-decoration: none;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0) scale(0.98); }
+
+    .btn--primary {
+      background: var(--indigo);
+      color: #fff;
+      box-shadow: 0 4px 14px -2px rgba(79,70,229,0.35);
+    }
+    .btn--primary:hover {
+      background: #4338CA;
+      box-shadow: 0 8px 20px -4px rgba(79,70,229,0.4);
+    }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--ink-mid);
+      border: 1.5px solid var(--rule);
+    }
+    .btn--ghost:hover {
+      border-color: var(--ink-mid);
+      color: var(--ink);
+    }
+
+    .hero__scroll-hint {
+      margin-top: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      letter-spacing: 0.04em;
+    }
+
+    .scroll-line {
+      width: 32px;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── Divider ──────────────────────────────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── Products ─────────────────────────────────────────────────────────── */
+    .products {
+      padding-block: var(--section-gap);
+    }
+
+    .products__header {
+      margin-bottom: 3.5rem;
+    }
+
+    .products__header h2 {
+      margin-top: 0.6rem;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    /* Each product: horizontal strip */
+    .product-strip {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0 3rem;
+      padding-block: 2.5rem;
+      border-top: 1px solid var(--rule);
+      align-items: start;
+    }
+    .product-strip:last-child {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    @media (max-width: 680px) {
+      .product-strip {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .product-strip__label {
+      padding-top: 0.15rem;
+    }
+
+    .product-strip__tag {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .product-strip__status {
+      margin-top: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-mid);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34D399; /* green = live */
+      flex-shrink: 0;
+    }
+    .status-dot--building { background: var(--amber); }
+
+    .product-strip__body h3 {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .product-strip__body p {
+      margin-top: 0.65rem;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--ink-mid);
+      max-width: 54ch;
+    }
+
+    .product-strip__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: 1.1rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--indigo);
+      transition: gap 0.2s;
+    }
+    .product-strip__link:hover { gap: 0.5rem; }
+    .product-strip__link svg { transition: transform 0.2s; }
+    .product-strip__link:hover svg { transform: translateX(2px); }
+
+    /* ── Services band ────────────────────────────────────────────────────── */
+    .services {
+      background: var(--indigo-2);
+      padding-block: clamp(3.5rem, 7vw, 6rem);
+    }
+
+    .services__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 720px) {
+      .services__inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .services__left h2 {
+      margin-top: 0.6rem;
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.18;
+    }
+
+    .services__left p {
+      margin-top: 1rem;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--ink-mid);
+      max-width: 44ch;
+    }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding-top: 0.25rem;
+    }
+
+    .service-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .service-item__icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      color: var(--indigo);
+      margin-top: 0.1rem;
+    }
+
+    .service-item__text strong {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .service-item__text span {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+      margin-top: 0.15rem;
+    }
+
+    /* ── About ────────────────────────────────────────────────────────────── */
+    .about {
+      padding-block: var(--section-gap);
+    }
+
+    .about__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .about__inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .about__left h2 {
+      margin-top: 0.6rem;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    .about__left p {
+      margin-top: 1.1rem;
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--ink-mid);
+    }
+    .about__left p + p { margin-top: 0.85rem; }
+
+    /* The "portrait" — a purely typographic block replacing a photo */
+    .about__portrait {
+      background: var(--ink);
+      border-radius: 16px;
+      padding: clamp(2rem, 4vw, 3rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about__portrait-name {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      line-height: 1.05;
+    }
+    .about__portrait-name span {
+      color: var(--amber);
+    }
+
+    .about__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+      padding: 0.3rem 0.65rem;
+    }
+
+    .about__portrait-line {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .about__portrait-quote {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.55);
+      font-style: italic;
+    }
+
+    /* ── Footer ───────────────────────────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--rule);
+      padding-block: 2.5rem;
+    }
+
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .footer__brand {
+      font-size: 0.9375rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+    }
+
+    
+    /* The Co mark SVG — sized to cap-height, scales with font */
+    .footer__brand  .co-mark {
+      display: inline-block;
+      height: 2rem;
+      width: auto;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-left: 0.3rem;
+    }
+
+    .footer__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .footer__contact { text-align: left; }
+    }
+
+    .footer__contact a {
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      font-weight: 500;
+      transition: color 0.18s;
+    }
+    .footer__contact a:hover { color: var(--indigo); }
+
+    .footer__copy {
+      font-size: 0.8125rem;
+      color: var(--ink-soft);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────────────────────────────────── -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo" aria-label="Made Ready Co home">
+        Made Ready
+         <svg
+  class="co-mark"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Co"
+  role="img"
+>
+  <path
+    d="M 17 3.34
+       A 10 10 0 1 0 17 20.66"
+    stroke="#4F46E5"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <circle
+    cx="12"
+    cy="12"
+    r="3"
+    fill="#4F46E5"
+  />
+</svg>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="mailto:roland@madeready.co" class="nav__cta">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <p class="eyebrow hero__kicker reveal">Digital product studio · Leicester, UK</p>
+        <h1 class="hero__headline reveal" id="hero-heading">
+          We make digital products
+          <span class="accent">worth paying for.</span>
+        </h1>
+        <p class="hero__sub reveal">
+          Made Ready Co builds tools that solve real problems — for UK households managing their money,
+          and for developers who care about craft. Small team, high standards, no filler.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#products" class="btn btn--primary">
+            See what we make
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#about" class="btn btn--ghost">About the studio</a>
+        </div>
+        <p class="hero__scroll-hint reveal" aria-hidden="true">
+          <span class="scroll-line"></span>
+          Scroll to explore
+        </p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ── Products ──────────────────────────────────────────────────────── -->
+    <section class="products" id="products" aria-labelledby="products-heading">
+      <div class="container">
+        <header class="products__header reveal">
+          <p class="eyebrow">What we make</p>
+          <h2 id="products-heading">Two products.<br>Two very different audiences.</h2>
+        </header>
+
+        <!-- Product 1: MRBT -->
+        <article class="product-strip reveal">
+          <div class="product-strip__label">
+            <p class="product-strip__tag">Personal finance</p>
+            <p class="product-strip__status">
+              <span class="status-dot" aria-hidden="true"></span>
+              Live on Etsy
+            </p>
+          </div>
+          <div class="product-strip__body">
+            <h3>Made Ready Budget Tracker</h3>
+            <p>
+              A Google Sheets budget tracker built specifically for UK bank accounts.
+              Import CSV statements from Monzo, Chase, Starling, Barclays, and Revolut.
+              Auto-categorise spending, track net worth, and see a live safe-to-spend figure —
+              all inside your own Google account. No subscription. One-time purchase.
+            </p>
+            <a href="https://madeready.co" class="product-strip__link" target="_blank" rel="noopener">
+              View on Etsy
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                <path d="M2 6.5h9M7 2l4.5 4.5L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Product 2: Component library -->
+        <article class="product-strip reveal">
+          <div class="product-strip__label">
+            <p class="product-strip__tag">Developer tools</p>
+            <p class="product-strip__status">
+              <span class="status-dot status-dot--building" aria-hidden="true"></span>
+              Building now
+            </p>
+          </div>
+          <div class="product-strip__body">
+            <h3>Made Ready UI</h3>
+            <p>
+              A premium React component library for developers who care about the fine details.
+              Copy-paste components built on Tailwind v4 and Motion, with editorial aesthetics
+              drawn from print design and a physics engine tuned to feel physical, not digital.
+              Free components first. A paid application kit coming soon.
+            </p>
+            <a href="mailto:roland@madeready.co?subject=Made Ready UI early access" class="product-strip__link">
+              Join early access
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                <path d="M2 6.5h9M7 2l4.5 4.5L7 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── Services ──────────────────────────────────────────────────────── -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services__inner">
+          <div class="reveal">
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-heading">Beyond the products</h2>
+            <p>
+              Alongside our own products, we take on a small number of
+              well-scoped projects with founders and teams who need
+              thoughtful frontend work with a strong design sensibility.
+            </p>
+          </div>
+          <ul class="service-list reveal">
+            <li class="service-item">
+              <div class="service-item__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <rect x="2" y="2" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <rect x="10" y="2" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <rect x="2" y="10" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  <rect x="10" y="10" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="service-item__text">
+                <strong>React design systems</strong>
+                <span>Component libraries, token systems, and UI kits for product teams who want to move faster without losing quality.</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 2v14M2 9h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="9" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="service-item__text">
+                <strong>Fractional frontend</strong>
+                <span>Frontend development capacity for early-stage teams. Hands-on build, a few days a week, with a design eye on every decision.</span>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-item__icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M3 14l4-4 3 3 5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="3" cy="14" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="service-item__text">
+                <strong>Digital product builds</strong>
+                <span>End-to-end product development for well-specified ideas. Next.js, TypeScript, Tailwind, Prisma, Vercel — built to last.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ──────────────────────────────────────────────────────────── -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__left reveal">
+            <p class="eyebrow">The studio</p>
+            <h2 id="about-heading">A design education.<br>A builder's mindset.</h2>
+            <p>
+              Made Ready Co is run by Rol — a developer and designer based in Leicester, UK,
+              with a background in fine art and print design from Central Saint Martins in London.
+              Seven years building things for the web. A lifetime caring about
+              how things look and feel.
+            </p>
+            <p>
+              The combination isn't common. Most developers don't art-direct.
+              Most designers don't build. The studio exists in that gap —
+              making products that work properly <em>and</em> look like someone
+              genuinely thought about them.
+            </p>
+            <p>
+              Available for the right projects.
+            </p>
+          </div>
+          <div class="about__portrait reveal" aria-label="About Rol, founder of Made Ready Co">
+            <p class="about__portrait-name">
+              Rol<span>.</span>
+            </p>
+            <div class="about__tags" aria-label="Background">
+              <span class="tag">Central Saint Martins</span>
+              <span class="tag">Fine Art</span>
+              <span class="tag">Print Design</span>
+              <span class="tag">React · Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Leicester, UK</span>
+            </div>
+            <div class="about__portrait-line" aria-hidden="true"></div>
+            <p class="about__portrait-quote">
+              "The best interfaces feel inevitable — like someone removed everything
+              that wasn't supposed to be there."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__brand">
+        Made Ready
+        <svg
+  class="co-mark"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Co"
+  role="img"
+>
+  <path
+    d="M 17 3.34
+       A 10 10 0 1 0 17 20.66"
+    stroke="#4F46E5"
+    stroke-width="2"
+    stroke-linecap="round"
+    fill="none"
+  />
+
+  <circle
+    cx="12"
+    cy="12"
+    r="3"
+    fill="#4F46E5"
+  />
+</svg>
+      </p>
+      <div class="footer__contact">
+        <a href="mailto:roland@madeready.co">roland@madeready.co</a>
+        <a href="https://github.com/madereadyco" target="_blank" rel="noopener">github.com/madereadyco</a>
+      </div>
+      <p class="footer__copy">© 2026 Made Ready Co · Leicester, UK</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-reveal — IntersectionObserver, no library needed
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Stagger siblings inside the same parent
+            const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')]
+              .filter(el => !el.classList.contains('visible'));
+            const idx = siblings.indexOf(entry.target);
+            setTimeout(() => entry.target.classList.add('visible'), idx * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Smooth-scroll nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
+</body>
+</html>
