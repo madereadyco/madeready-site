@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="30" height="30"
+    style="margin-top:2px; margin-left:2px;" role="img" aria-label="Made Ready Co mark — registration"
+    style="color:#16171C">
+    <circle cx="60" cy="60" r="30" fill="none" stroke="#ff6000" stroke-width="7" />
+    <line x1="60" y1="9" x2="60" y2="111" stroke="#ff6000" stroke-width="4" />
+    <line x1="9" y1="60" x2="111" y2="60" stroke="#ff6000" stroke-width="4" />
+</svg>
