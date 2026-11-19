@@ -1,6 +1,6 @@
 # Made Ready
 
-Live site: **https://www.madeready.co**
+Live site: **[www.madeready.co](https://www.madeready.co)**
 
 Website for Made Ready: demo-first website redesigns and monthly care plans (Essential £45, Standard £75, Premium £120) for small UK trades. Plain HTML and CSS, no build step. The only JavaScript is a few small inline scripts (the example modal and email address assembly).
 
