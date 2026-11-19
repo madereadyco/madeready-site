@@ -70,6 +70,23 @@
 </div>
 </div></section>
 
+<section id="example" style="background:#fff"><div class="wrap">
+<p class="eyebrow">An example</p>
+<h2>What a makeover looks like.</h2>
+<p class="lede">Here is a made-up plumber, Pell &amp; Wren, before and after. It is a concept I designed to show the idea, not a real client or real reviews.</p>
+<p style="margin-top:24px"><button class="btn" type="button" id="open-example" aria-haspopup="dialog">See the before and after</button></p>
+</div></section>
+
+<dialog id="example-dialog" aria-labelledby="ex-title">
+<div class="dlg-bar">
+<h2 id="ex-title">Concept: Pell &amp; Wren Plumbing</h2>
+<div class="tabs" role="group" aria-label="Choose version"><button type="button" class="tab" data-src="/example/before.html" aria-pressed="true">Before</button><button type="button" class="tab" data-src="/example/after.html" aria-pressed="false">After</button></div>
+<button type="button" class="btn ghost sm" id="close-example">Close</button>
+</div>
+<p class="dlg-note">Fictional business made up for this example. Scroll inside the page to explore it.</p>
+<iframe id="example-frame" title="Example website" loading="lazy"></iframe>
+</dialog>
+
 <section id="care" style="background:#FFF1DE"><div class="wrap">
 <p class="eyebrow">Care plan</p>
 <h2>Then I keep it running.</h2>
@@ -106,6 +123,18 @@
 </div></section>
 </main>
 <footer><div class="wrap"><p>© 2026 Made Ready · Leicester, UK</p><p><a href="/privacy.html">Privacy</a></p></div></footer>
+<script>
+(function(){var d=document.getElementById("example-dialog"),f=document.getElementById("example-frame"),o=document.getElementById("open-example");
+if(!d||!d.showModal){if(o)o.outerHTML='<a class="btn" href="/example/after.html">See the example</a>';return}
+var tabs=d.querySelectorAll(".tab");
+function pick(t){tabs.forEach(function(x){x.setAttribute("aria-pressed",x===t)});f.src=t.dataset.src}
+tabs.forEach(function(t){t.addEventListener("click",function(){pick(t)})});
+o.addEventListener("click",function(){if(!f.getAttribute("src"))pick(tabs[0]);d.showModal();document.documentElement.style.overflow="hidden"});
+document.getElementById("close-example").addEventListener("click",function(){d.close()});
+d.addEventListener("close",function(){document.documentElement.style.overflow=""});
+d.addEventListener("click",function(e){if(e.target===d)d.close()});
+})();
+</script>
 <script>
 document.querySelectorAll("[data-u]").forEach(function(e){var a=e.dataset.u+"@"+e.dataset.d;if(e.tagName==="A"){e.href="mailto:"+a+"?subject=Free%20demo%20of%20my%20new%20website"}else{e.textContent=a}});
 </script>
