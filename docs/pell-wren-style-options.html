@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Pell &amp; Wren style options (internal)</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#EDEDED;color:#1A1A1A;font:16px/1.5 system-ui,Arial,sans-serif}
+.top{max-width:1200px;margin:0 auto;padding:20px 16px}
+.top h1{margin:0 0 6px;font-size:24px}
+.top p{margin:6px 0}
+.rec{background:#fff;border-left:5px solid #1A1A1A;padding:12px 14px;margin-top:14px}
+.grid{max-width:1200px;margin:0 auto;padding:0 16px 40px;display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.opt{background:#fff;padding:16px;border-radius:8px}
+.opt h2{margin:0;font-size:20px}.feel{margin:4px 0 10px;color:#333}
+.spec p{margin:2px 0;font-size:14px}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.chip span{display:block;height:36px;border-radius:4px;border:1px solid #0002}
+.chip code{font-size:12px;display:block;margin-top:2px}.chip small{font-size:11px;color:#555}
+.mini{background:var(--bg);color:var(--ink);font-family:var(--bf);border:1px solid #0003;border-radius:6px;overflow:hidden}
+.m-strip{background:var(--pri);color:var(--onpri);font-size:12px;padding:6px 12px}
+.m-hero{background:var(--hero);color:var(--herotxt);padding:18px 14px}
+.m-name{font-family:var(--hf);font-weight:700;font-size:18px}.m-name em{font-weight:400;font-style:italic}
+.m-hero h3{font-family:var(--hf);font-size:22px;line-height:1.15;margin:12px 0 4px}
+.m-hero p{margin:0 0 12px;font-size:14px}
+.m-btn{display:inline-block;background:var(--pri);color:var(--onpri);padding:10px 16px;border-radius:var(--rad);font-weight:700;font-size:13px;text-transform:var(--bt);margin:2px 4px 2px 0}
+.m-btn2{display:inline-block;border:2px solid var(--pri);color:var(--ink);padding:8px 14px;border-radius:var(--rad);font-weight:700;font-size:13px;text-transform:var(--bt);margin:2px 0}
+.m-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;background:var(--bg)}
+.m-card{background:var(--sheet);padding:10px;border-radius:calc(var(--rad) * .8);font-size:13px}
+#o1 .m-card{border:1px solid #D9CDB8;border-top:5px solid var(--pri)}
+#o2 .m-card{border-radius:12px}
+#o3 .m-card{border:2px solid #141414;border-top:8px solid var(--acc)}
+#o4 .m-card{border-radius:18px}
+#o3 .m-strip{background:#141414;color:#FFD21F}
+#o3 .m-btn2{background:#fff}
+.m-card h4{margin:0 0 3px;font-family:var(--hf);font-size:15px}.m-card p{margin:0;color:var(--soft)}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:12.5px}
+th,td{text-align:left;padding:5px 4px;border-top:1px solid #ddd;vertical-align:middle}
+.sw{display:inline-block;width:12px;height:12px;border:1px solid #0004;margin-right:2px;vertical-align:-2px}
+td:nth-child(2){word-break:break-word}
+</style></head><body>
+<div class="top"><h1>Pell &amp; Wren: style options</h1>
+<p>Internal mockup, not linked from the live site. Four directions for the &ldquo;after&rdquo; concept. Ratios are WCAG contrast (4.5:1 needed for normal text). None use navy or copper. Option 1 is the current build (still cream, but oxblood and brass); Options 2 to 4 are all clearly away from madeready.co.</p>
+<div class="rec"><b>Recommendation: Option 2, Modern clean.</b> Strong contrast on every pair, and it looks like a firm you&rsquo;d trust with a bathroom install, which is where the margin is. Option 3 is the pick if the target is emergency call-outs, and Option 1 is the safest if you want to keep what&rsquo;s built. Still, the real test is which one looks right next to a prospect&rsquo;s own &ldquo;before&rdquo; site.</div></div>
+<main class="grid"><article class="opt" id="o1" style="--bg:#F6F0E4;--sheet:#FBF8F1;--ink:#2A1B18;--soft:#5B4A44;--pri:#7A2230;--onpri:#FFFFFF;--acc:#7D5410;--hero:#F6F0E4;--herotxt:#2A1B18;--hf:Georgia, 'Iowan Old Style', Palatino, serif;--bf:'Trebuchet MS', 'Gill Sans', Calibri, sans-serif;--rad:2px;--bt:uppercase">
+<h2>1. Heritage (current)</h2><p class="feel">Established, trustworthy, a bit old-school. The letterhead look.</p>
+<div class="spec"><p><b>Palette:</b> Oxblood, brass</p><p><b>Fonts:</b> Georgia headlines + Trebuchet body</p><p><b>Buttons:</b> Square-ish, caps, letter-spaced</p><p><b>Cards:</b> 1px rule, thick red top edge</p></div>
+<div class="chips"><div class="chip"><span style="background:#F6F0E4"></span><code>#F6F0E4</code><small>Page</small></div><div class="chip"><span style="background:#FBF8F1"></span><code>#FBF8F1</code><small>Panel</small></div><div class="chip"><span style="background:#2A1B18"></span><code>#2A1B18</code><small>Text</small></div><div class="chip"><span style="background:#5B4A44"></span><code>#5B4A44</code><small>Soft text</small></div><div class="chip"><span style="background:#7A2230"></span><code>#7A2230</code><small>Brand</small></div><div class="chip"><span style="background:#7D5410"></span><code>#7D5410</code><small>Accent</small></div></div>
+<div class="mini">
+<div class="m-strip">Gas Safe registered &middot; 01632 960418</div>
+<div class="m-hero"><div class="m-name">Pell &amp; Wren <em>Plumbing</em></div>
+<h3>Leak, blockage or no hot water?</h3><p>We turn up when we say we will.</p>
+<span class="m-btn">Call 01632 960418</span> <span class="m-btn2">Free quote</span></div>
+<div class="m-cards"><div class="m-card"><h4>Emergency repairs</h4><p>Burst pipes and leaks, sorted the same day.</p></div><div class="m-card"><h4>Boiler servicing</h4><p>Annual services by Gas Safe engineers.</p></div></div>
+</div>
+<table><thead><tr><th>Pair</th><th>Colours</th><th>Ratio</th><th>WCAG</th></tr></thead><tbody><tr><td>Body text</td><td><span class="sw" style="background:#2A1B18"></span><span class="sw" style="background:#F6F0E4"></span>#2A1B18 on #F6F0E4</td><td><b>14.6:1</b></td><td>Pass</td></tr><tr><td>Soft text</td><td><span class="sw" style="background:#5B4A44"></span><span class="sw" style="background:#F6F0E4"></span>#5B4A44 on #F6F0E4</td><td><b>7.4:1</b></td><td>Pass</td></tr><tr><td>Button text</td><td><span class="sw" style="background:#FFFFFF"></span><span class="sw" style="background:#7A2230"></span>#FFFFFF on #7A2230</td><td><b>10.0:1</b></td><td>Pass</td></tr><tr><td>Hero text</td><td><span class="sw" style="background:#2A1B18"></span><span class="sw" style="background:#F6F0E4"></span>#2A1B18 on #F6F0E4</td><td><b>14.6:1</b></td><td>Pass</td></tr><tr><td>Link / accent text</td><td><span class="sw" style="background:#7A2230"></span><span class="sw" style="background:#F6F0E4"></span>#7A2230 on #F6F0E4</td><td><b>8.8:1</b></td><td>Pass</td></tr></tbody></table>
+</article><article class="opt" id="o2" style="--bg:#FFFFFF;--sheet:#EAF4F2;--ink:#16262B;--soft:#44575C;--pri:#0B6E6E;--onpri:#FFFFFF;--acc:#B4540A;--hero:#EAF4F2;--herotxt:#16262B;--hf:'Segoe UI', 'Helvetica Neue', Arial, sans-serif;--bf:'Segoe UI', 'Helvetica Neue', Arial, sans-serif;--rad:10px;--bt:none">
+<h2>2. Modern clean</h2><p class="feel">Fresh, calm, professional. Reads like a quality bathroom or heating firm.</p>
+<div class="spec"><p><b>Palette:</b> Deep teal, mint tint, rust</p><p><b>Fonts:</b> Segoe UI / Helvetica system sans throughout (Inter if you want a web font)</p><p><b>Buttons:</b> Rounded 10px, sentence case, solid</p><p><b>Cards:</b> Soft tint, rounded, no border</p></div>
+<div class="chips"><div class="chip"><span style="background:#FFFFFF"></span><code>#FFFFFF</code><small>Page</small></div><div class="chip"><span style="background:#EAF4F2"></span><code>#EAF4F2</code><small>Panel</small></div><div class="chip"><span style="background:#16262B"></span><code>#16262B</code><small>Text</small></div><div class="chip"><span style="background:#44575C"></span><code>#44575C</code><small>Soft text</small></div><div class="chip"><span style="background:#0B6E6E"></span><code>#0B6E6E</code><small>Brand</small></div><div class="chip"><span style="background:#B4540A"></span><code>#B4540A</code><small>Accent</small></div></div>
+<div class="mini">
+<div class="m-strip">Gas Safe registered &middot; 01632 960418</div>
+<div class="m-hero"><div class="m-name">Pell &amp; Wren <em>Plumbing</em></div>
+<h3>Leak, blockage or no hot water?</h3><p>We turn up when we say we will.</p>
+<span class="m-btn">Call 01632 960418</span> <span class="m-btn2">Free quote</span></div>
+<div class="m-cards"><div class="m-card"><h4>Emergency repairs</h4><p>Burst pipes and leaks, sorted the same day.</p></div><div class="m-card"><h4>Boiler servicing</h4><p>Annual services by Gas Safe engineers.</p></div></div>
+</div>
+<table><thead><tr><th>Pair</th><th>Colours</th><th>Ratio</th><th>WCAG</th></tr></thead><tbody><tr><td>Body text</td><td><span class="sw" style="background:#16262B"></span><span class="sw" style="background:#FFFFFF"></span>#16262B on #FFFFFF</td><td><b>15.6:1</b></td><td>Pass</td></tr><tr><td>Soft text</td><td><span class="sw" style="background:#44575C"></span><span class="sw" style="background:#FFFFFF"></span>#44575C on #FFFFFF</td><td><b>7.6:1</b></td><td>Pass</td></tr><tr><td>Button text</td><td><span class="sw" style="background:#FFFFFF"></span><span class="sw" style="background:#0B6E6E"></span>#FFFFFF on #0B6E6E</td><td><b>6.1:1</b></td><td>Pass AA</td></tr><tr><td>Hero text</td><td><span class="sw" style="background:#16262B"></span><span class="sw" style="background:#EAF4F2"></span>#16262B on #EAF4F2</td><td><b>13.9:1</b></td><td>Pass</td></tr><tr><td>Link / accent text</td><td><span class="sw" style="background:#0B6E6E"></span><span class="sw" style="background:#FFFFFF"></span>#0B6E6E on #FFFFFF</td><td><b>6.1:1</b></td><td>Pass AA</td></tr></tbody></table>
+</article><article class="opt" id="o3" style="--bg:#F3F3F0;--sheet:#FFFFFF;--ink:#141414;--soft:#454545;--pri:#141414;--onpri:#FFD21F;--acc:#FFD21F;--hero:#FFD21F;--herotxt:#141414;--hf:Impact, 'Arial Narrow Bold', 'Arial Black', sans-serif;--bf:Arial, 'Helvetica Neue', sans-serif;--rad:0;--bt:uppercase">
+<h2>3. Bold trade</h2><p class="feel">Loud, urgent, no-nonsense. Built for emergency call-outs and van-side recognition.</p>
+<div class="spec"><p><b>Palette:</b> Black, safety yellow</p><p><b>Fonts:</b> Impact/Arial Narrow headlines + Arial body (Oswald + Inter if a web font is allowed)</p><p><b>Buttons:</b> Square, black on yellow, heavy caps</p><p><b>Cards:</b> Hard black border, yellow tab</p></div>
+<div class="chips"><div class="chip"><span style="background:#F3F3F0"></span><code>#F3F3F0</code><small>Page</small></div><div class="chip"><span style="background:#FFFFFF"></span><code>#FFFFFF</code><small>Panel</small></div><div class="chip"><span style="background:#141414"></span><code>#141414</code><small>Text</small></div><div class="chip"><span style="background:#454545"></span><code>#454545</code><small>Soft text</small></div><div class="chip"><span style="background:#141414"></span><code>#141414</code><small>Brand</small></div><div class="chip"><span style="background:#FFD21F"></span><code>#FFD21F</code><small>Accent</small></div></div>
+<div class="mini">
+<div class="m-strip">Gas Safe registered &middot; 01632 960418</div>
+<div class="m-hero"><div class="m-name">Pell &amp; Wren <em>Plumbing</em></div>
+<h3>Leak, blockage or no hot water?</h3><p>We turn up when we say we will.</p>
+<span class="m-btn">Call 01632 960418</span> <span class="m-btn2">Free quote</span></div>
+<div class="m-cards"><div class="m-card"><h4>Emergency repairs</h4><p>Burst pipes and leaks, sorted the same day.</p></div><div class="m-card"><h4>Boiler servicing</h4><p>Annual services by Gas Safe engineers.</p></div></div>
+</div>
+<table><thead><tr><th>Pair</th><th>Colours</th><th>Ratio</th><th>WCAG</th></tr></thead><tbody><tr><td>Body text</td><td><span class="sw" style="background:#141414"></span><span class="sw" style="background:#F3F3F0"></span>#141414 on #F3F3F0</td><td><b>16.6:1</b></td><td>Pass</td></tr><tr><td>Soft text</td><td><span class="sw" style="background:#454545"></span><span class="sw" style="background:#F3F3F0"></span>#454545 on #F3F3F0</td><td><b>8.6:1</b></td><td>Pass</td></tr><tr><td>Button text</td><td><span class="sw" style="background:#FFD21F"></span><span class="sw" style="background:#141414"></span>#FFD21F on #141414</td><td><b>12.7:1</b></td><td>Pass</td></tr><tr><td>Hero text</td><td><span class="sw" style="background:#141414"></span><span class="sw" style="background:#FFD21F"></span>#141414 on #FFD21F</td><td><b>12.7:1</b></td><td>Pass</td></tr><tr><td>Link / accent text</td><td><span class="sw" style="background:#141414"></span><span class="sw" style="background:#F3F3F0"></span>#141414 on #F3F3F0</td><td><b>16.6:1</b></td><td>Pass</td></tr></tbody></table>
+</article><article class="opt" id="o4" style="--bg:#FFFFFF;--sheet:#E4F1E6;--ink:#1F2A22;--soft:#4A5A4E;--pri:#1D6B45;--onpri:#FFFFFF;--acc:#F2C230;--hero:#E4F1E6;--herotxt:#1F2A22;--hf:'Trebuchet MS', 'Segoe UI', Verdana, sans-serif;--bf:'Trebuchet MS', 'Segoe UI', Verdana, sans-serif;--rad:999px;--bt:none">
+<h2>4. Friendly local</h2><p class="feel">Warm, approachable, family-run. Good for homeowner and elderly customers.</p>
+<div class="spec"><p><b>Palette:</b> Forest green, sage, butter yellow</p><p><b>Fonts:</b> Trebuchet / Verdana rounded-feel system sans (Nunito if a web font is allowed)</p><p><b>Buttons:</b> Pill-shaped, sentence case</p><p><b>Cards:</b> Big rounded corners, sage fill</p></div>
+<div class="chips"><div class="chip"><span style="background:#FFFFFF"></span><code>#FFFFFF</code><small>Page</small></div><div class="chip"><span style="background:#E4F1E6"></span><code>#E4F1E6</code><small>Panel</small></div><div class="chip"><span style="background:#1F2A22"></span><code>#1F2A22</code><small>Text</small></div><div class="chip"><span style="background:#4A5A4E"></span><code>#4A5A4E</code><small>Soft text</small></div><div class="chip"><span style="background:#1D6B45"></span><code>#1D6B45</code><small>Brand</small></div><div class="chip"><span style="background:#F2C230"></span><code>#F2C230</code><small>Accent</small></div></div>
+<div class="mini">
+<div class="m-strip">Gas Safe registered &middot; 01632 960418</div>
+<div class="m-hero"><div class="m-name">Pell &amp; Wren <em>Plumbing</em></div>
+<h3>Leak, blockage or no hot water?</h3><p>We turn up when we say we will.</p>
+<span class="m-btn">Call 01632 960418</span> <span class="m-btn2">Free quote</span></div>
+<div class="m-cards"><div class="m-card"><h4>Emergency repairs</h4><p>Burst pipes and leaks, sorted the same day.</p></div><div class="m-card"><h4>Boiler servicing</h4><p>Annual services by Gas Safe engineers.</p></div></div>
+</div>
+<table><thead><tr><th>Pair</th><th>Colours</th><th>Ratio</th><th>WCAG</th></tr></thead><tbody><tr><td>Body text</td><td><span class="sw" style="background:#1F2A22"></span><span class="sw" style="background:#FFFFFF"></span>#1F2A22 on #FFFFFF</td><td><b>14.9:1</b></td><td>Pass</td></tr><tr><td>Soft text</td><td><span class="sw" style="background:#4A5A4E"></span><span class="sw" style="background:#FFFFFF"></span>#4A5A4E on #FFFFFF</td><td><b>7.3:1</b></td><td>Pass</td></tr><tr><td>Button text</td><td><span class="sw" style="background:#FFFFFF"></span><span class="sw" style="background:#1D6B45"></span>#FFFFFF on #1D6B45</td><td><b>6.5:1</b></td><td>Pass AA</td></tr><tr><td>Hero text</td><td><span class="sw" style="background:#1F2A22"></span><span class="sw" style="background:#E4F1E6"></span>#1F2A22 on #E4F1E6</td><td><b>12.8:1</b></td><td>Pass</td></tr><tr><td>Link / accent text</td><td><span class="sw" style="background:#1D6B45"></span><span class="sw" style="background:#FFFFFF"></span>#1D6B45 on #FFFFFF</td><td><b>6.5:1</b></td><td>Pass AA</td></tr></tbody></table>
+</article></main></body></html>
