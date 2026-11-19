@@ -6,7 +6,7 @@ Website for Made Ready: demo-first website redesigns and monthly care plans for 
 - `index.html` – home page
 - `privacy.html` – privacy notice (DRAFT STUB, must be completed)
 - `styles.css` – all styles
-- `example/` – fictional "Yates & Wren" before/after concept, shown in a modal on the home page (noindex)
+- `example/` – fictional "Pell & Wren" before/after concept, shown in a modal on the home page (noindex)
 - `docs/` – backup of the previous site copy
 
 ## Before going live
