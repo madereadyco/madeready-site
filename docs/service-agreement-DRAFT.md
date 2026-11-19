@@ -10,9 +10,9 @@ You've chosen the plan below. It starts on **[start date]**.
 
 | Plan | Price per month | Edit minutes per month | Reply time |
 | --- | --- | --- | --- |
-| Essential | £45 | None | Within 5 working days |
-| Standard | £75 | 30 | Within 3 working days |
-| Premium | £120 | 90 | Priority, within 2 working days |
+| Essential | £45 | None | Within 3 working days |
+| Standard | £75 | 30 | Within 2 working days |
+| Premium | £120 | 90 | Priority, within 1 working day |
 
 Selected plan: **[Essential / Standard / Premium]**
 
@@ -25,6 +25,16 @@ No VAT is added. **[Roland: confirm you are not VAT registered. Update if that c
 - Backup monitoring
 - Uptime alerts
 - A monthly report
+
+**Standard and Premium also include Google Business Profile setup and monthly care** (see section 2a). Essential does not.
+
+## 2a. Google Business Profile and reviews (Standard and Premium)
+
+- I set up your profile once and keep it up to date. You own it and add me as a manager. You do Google's verification.
+- Each month: photo posts or updates, drafted review replies, and a short report of calls, direction requests and website clicks.
+- I give you a review link, QR code and wording. You ask your customers. I never write, buy or edit reviews.
+- No promises about rankings, calls or review numbers.
+- If someone else controls your listing, setup may take longer.
 
 ## 3. Edits
 
