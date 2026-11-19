@@ -26,6 +26,16 @@ No VAT is added. **[Roland: confirm you are not VAT registered. Update if that c
 - Uptime alerts
 - A monthly report
 
+**Standard and Premium also include Google Business Profile setup and monthly care** (see section 2a). Essential does not.
+
+## 2a. Google Business Profile and reviews (Standard and Premium)
+
+- I set up your profile once and keep it up to date. You own it and add me as a manager. You do Google's verification.
+- Each month: photo posts or updates, drafted review replies, and a short report of calls, direction requests and website clicks.
+- I give you a review link, QR code and wording. You ask your customers. I never write, buy or edit reviews.
+- No promises about rankings, calls or review numbers.
+- If someone else controls your listing, setup may take longer.
+
 ## 3. Edits
 
 - Send requests by email only. There is no phone support.
