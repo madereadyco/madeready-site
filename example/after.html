@@ -7,162 +7,150 @@
 <title>Concept: Pell & Wren Plumbing, after</title>
 <meta name="description" content="Fictional plumber website, shown as a concept &quot;after&quot;.">
 <style>
-:root{--paper:#F6F0E4;--sheet:#FBF8F1;--ink:#2A1B18;--soft:#5B4A44;--rule:#D9CDB8;--red:#7A2230;--red-d:#5E1823;--brass:#7D5410;--serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;--sans:"Trebuchet MS","Gill Sans","Gill Sans MT",Calibri,"Segoe UI",sans-serif}
+:root{--bg:#FFFFFF;--mint:#E6F4F1;--teal:#0B6E6E;--teal-d:#084F4F;--rust:#B4491F;--rust-d:#913917;--ink:#12302F;--soft:#44605E;--line:#CFE3DF;--r:10px;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65}
-a{color:var(--red)}a:hover{color:var(--red-d)}
-.w{max-width:1040px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;color:var(--ink)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:var(--teal)}a:hover{color:var(--teal-d)}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{margin:0;font-family:var(--sans);color:var(--ink)}
 .note{background:#FFF1D6;color:#5C3B00;font-size:14px;padding:10px 24px;text-align:center;border-bottom:1px solid #F0D9A8}
-.strip{background:var(--red);color:#fff;font-size:14px;letter-spacing:.04em}
-.strip .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding-top:9px;padding-bottom:9px}
-.strip a{color:#fff;font-weight:700;text-decoration:none}
-.mast{text-align:center;padding:36px 24px 20px;border-bottom:1px solid var(--rule)}
-.mast .name{font-family:var(--serif);font-size:clamp(30px,6vw,46px);font-weight:700;letter-spacing:.01em;line-height:1.1}
-.mast .name em{font-weight:400;font-style:italic;color:var(--red)}
-.mast .tag{margin:8px 0 0;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);font-weight:700}
-.menu{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 28px;padding:14px 24px;border-bottom:1px solid var(--rule);font-size:15px}
-.menu a{color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
-.menu a:hover{border-bottom-color:var(--red)}
-.hero{padding:72px 0 64px}
-.hero .w{display:grid;grid-template-columns:1fr;gap:40px}
-.kicker{margin:0 0 14px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--brass)}
-.hero h1{font-size:clamp(34px,6.4vw,62px);line-height:1.08;font-weight:400;letter-spacing:-.01em}
-.hero h1 b{font-weight:700;font-style:italic;color:var(--red)}
-.lead{margin:22px 0 0;font-size:19px;color:var(--soft);max-width:34em}
-.acts{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
-.btn{display:inline-block;padding:15px 28px;background:var(--red);color:#fff;border:2px solid var(--red);border-radius:2px;font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer}
-.btn:hover{background:var(--red-d);border-color:var(--red-d);color:#fff}
-.lnk{font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;text-decoration-color:var(--brass)}
-.promise{background:var(--sheet);border:1px solid var(--rule);border-top:6px solid var(--red);padding:28px}
-.promise h2{font-size:22px;margin-bottom:6px}
-.promise ul{list-style:none;margin:16px 0 0;padding:0}
-.promise li{padding:12px 0;border-top:1px solid var(--rule);display:flex;gap:12px}
-.promise li::before{content:"\2022";color:var(--brass);font-weight:700}
-.sec{padding:72px 0;border-top:1px solid var(--rule)}
-.sec h2{font-size:clamp(28px,4.4vw,40px);line-height:1.15;font-weight:400}
-.sec h2 b{font-weight:700;font-style:italic}
+header{border-bottom:1px solid var(--line);background:#fff}
+header .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-top:14px;padding-bottom:14px}
+.logo{display:block;height:44px;width:auto}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;font-size:15px}
+.nav a.l{color:var(--ink);text-decoration:none;font-weight:600}
+.nav a.l:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--rust);color:#fff;border:2px solid var(--rust);border-radius:var(--r);font:700 16px/1 var(--sans);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--rust-d);border-color:var(--rust-d);color:#fff}
+.btn.alt{background:#fff;color:var(--teal);border-color:var(--teal)}
+.btn.alt:hover{background:var(--mint);color:var(--teal-d)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+.hero{background:var(--mint);padding:64px 0 72px}
+.hero .w{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.eyebrow{margin:0 0 12px;font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--teal)}
+.hero h1{font-size:clamp(34px,6vw,56px);line-height:1.08;font-weight:800;letter-spacing:-.02em}
+.lead{margin:20px 0 0;font-size:19px;color:var(--soft);max-width:33em}
+.acts{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 6px 24px rgba(11,110,110,.08)}
+.panel h2{font-size:20px;margin-bottom:12px}
+.panel ul{list-style:none;margin:0;padding:0}
+.panel li{display:flex;gap:12px;padding:10px 0;align-items:flex-start}
+.panel li svg{flex:none;margin-top:3px}
+.sec{padding:72px 0}
+.sec.tint{background:var(--mint)}
+.sec h2{font-size:clamp(28px,4vw,38px);line-height:1.15;font-weight:800;letter-spacing:-.015em}
 .sub{margin:10px 0 0;color:var(--soft);max-width:36em}
-.rows{margin:36px 0 0;padding:0;list-style:none;column-gap:56px}
-.rows li{break-inside:avoid;padding:20px 0;border-top:1px solid var(--rule)}
-.rows li:last-child{border-bottom:1px solid var(--rule)}
-.rows h3{font-size:20px}
-.rows p{margin:6px 0 0;color:var(--soft)}
-.steps{margin:40px 0 0;display:grid;grid-template-columns:1fr;gap:28px}
-.steps .n{font-family:var(--serif);font-size:64px;line-height:1;color:var(--red);font-style:italic;display:block;margin-bottom:6px}
-.steps h3{font-size:20px}
-.steps p{margin:8px 0 0;color:var(--soft)}
-.band{background:var(--sheet)}
-.areas{margin:22px 0 0;font-family:var(--serif);font-size:clamp(20px,3.4vw,28px);line-height:1.7;font-style:italic;display:flex;flex-wrap:wrap;gap:0 .6em}
-.areas span+span::before{content:"\00B7";color:var(--brass);font-style:normal;margin-right:.6em}
-.quote{margin:36px 0 0;padding:0 0 0 22px;border-left:4px solid var(--red)}
-.quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(22px,3.6vw,30px);line-height:1.4}
-.quote figcaption{margin-top:12px;font-size:15px;color:var(--soft)}
-.more{margin:32px 0 0;display:grid;grid-template-columns:1fr;gap:22px}
-.more figure{margin:0;padding:18px 0 0;border-top:1px solid var(--rule)}
-.more blockquote{margin:0}
-.more figcaption{margin-top:8px;font-size:15px;color:var(--soft)}
-.small{margin:0 0 0;font-size:15px;color:#5B4A44}
-.contact{background:var(--red);color:#fff;padding:72px 0}
-.contact .w{display:grid;grid-template-columns:1fr;gap:40px}
-.contact h2{color:#fff;font-size:clamp(28px,4.4vw,40px);font-weight:400}
-.contact h2 b{font-style:italic}
-.contact p{color:#F3E4DC;margin:14px 0 0}
-.contact .ph{display:inline-block;margin-top:22px;color:#fff;font-family:var(--serif);font-size:clamp(28px,5vw,40px);font-weight:700;text-decoration:none;border-bottom:2px solid #E6C27A}
-.contact label{display:block;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#F3E4DC;margin-top:18px}
-.contact input,.contact textarea{display:block;width:100%;margin-top:4px;padding:10px 2px;background:transparent;border:0;border-bottom:2px solid #E6C27A;color:#fff;font:inherit;border-radius:0}
-.contact input:focus,.contact textarea:focus{outline:2px solid #fff;outline-offset:3px}
-.contact .btn{margin-top:26px;background:#fff;color:var(--red);border-color:#fff}
-.contact .btn:hover{background:#F3E4DC;color:var(--red-d);border-color:#F3E4DC}
-footer{background:var(--ink);color:#E9DDD0;font-size:14px;padding:22px 0}
-footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px}
-footer a{color:#E9DDD0}
-@media(min-width:760px){
-.hero .w{grid-template-columns:1.5fr 1fr;align-items:start;gap:56px}
-.rows{columns:2}
-.steps{grid-template-columns:repeat(3,1fr);gap:40px}
-.more{grid-template-columns:1fr 1fr;gap:40px}
-.contact .w{grid-template-columns:1fr 1fr;gap:64px}
-}
-@media(max-width:520px){.hero{padding:48px 0 44px}.sec,.contact{padding:52px 0}}
+.grid{margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card h3{font-size:19px}
+.card p{margin:8px 0 0;color:var(--soft)}
+.ico{width:40px;height:40px;border-radius:10px;background:var(--mint);display:grid;place-items:center;margin-bottom:14px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+.step h3{font-size:19px}.step p{margin:6px 0 0;color:var(--soft)}
+.chips{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:9px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;color:var(--teal-d)}
+.small{margin:10px 0 0;font-size:15px;color:var(--soft)}
+.rev blockquote{margin:0;font-size:17px;line-height:1.6}
+.rev figcaption{margin-top:12px;font-size:15px;color:var(--soft)}
+.stars{color:var(--rust);letter-spacing:2px;font-size:18px;margin-bottom:8px}
+.contact{padding:72px 0}
+.box{background:var(--teal);color:#fff;border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr;gap:36px}
+.box h2{color:#fff;font-size:clamp(28px,4vw,38px);font-weight:800}
+.box p{color:#E3F2EF;margin:12px 0 0}
+.box .tel{display:inline-block;margin-top:20px;color:#fff;font-weight:800;font-size:clamp(26px,5vw,34px);text-decoration:none}
+.box label{display:block;font-size:14px;font-weight:600;color:#E3F2EF;margin-top:14px}
+.box label:first-child{margin-top:0}
+.box input,.box textarea{display:block;width:100%;margin-top:6px;min-height:46px;padding:10px 14px;border-radius:8px;border:1px solid #fff;background:#fff;color:var(--ink);font:inherit}
+.box .btn{margin-top:18px;width:100%}
+.box :focus-visible{outline:3px solid #FFD9C7;outline-offset:2px}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:14px;color:var(--soft)}
+footer .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px}
+footer .logo{height:34px}
+@media(min-width:800px){.hero .w{grid-template-columns:1.4fr 1fr;gap:56px}.box{grid-template-columns:1fr 1fr;gap:56px;padding:48px}.box .btn{width:auto}}
+@media(max-width:520px){.hero{padding:44px 0 52px}.sec,.contact{padding:52px 0}.box{padding:28px 22px}}
 </style>
 </head>
 <body>
 
 <div class="note">Concept project: Pell &amp; Wren is a fictional business, created to show a typical trade website makeover.</div>
 
-<div class="strip"><div class="w"><span>Gas Safe registered · Fully insured</span><a href="tel:01632960418">01632 960418</a></div></div>
-
-<header class="mast" id="top">
-<div class="name">Pell &amp; Wren <em>Plumbing</em></div>
-<p class="tag">Plumbing &amp; heating · Hartsfield</p>
-</header>
-<nav class="menu" aria-label="Main">
-<a href="#services">Services</a><a href="#process">How it works</a><a href="#areas">Areas</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+<header id="top"><div class="w">
+<a href="#top" aria-label="Pell &amp; Wren Plumbing home"><svg class="logo" viewBox="0 0 300 64" role="img" aria-label="Pell &amp; Wren Plumbing">
+<rect width="64" height="64" rx="14" fill="#0B6E6E"/>
+<path d="M32 10C25 21 17.5 28.5 17.5 38a14.5 14.5 0 0 0 29 0C46.5 28.5 39 21 32 10z" fill="#E6F4F1"/>
+<path d="M24 40h10a4 4 0 0 1 4 4" fill="none" stroke="#B4491F" stroke-width="4" stroke-linecap="round"/>
+<text x="80" y="31" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="25" font-weight="800" fill="#12302F" letter-spacing="-0.4">Pell &amp; Wren</text>
+<text x="81" y="51" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="700" fill="#0B6E6E" letter-spacing="2.6">PLUMBING</text>
+</svg>
+</a>
+<nav class="nav" aria-label="Main">
+<a class="l" href="#services">Services</a><a class="l" href="#process">How it works</a><a class="l" href="#areas">Areas</a><a class="l" href="#reviews">Reviews</a>
+<a class="btn sm" href="tel:01632960418">Call 01632 960418</a>
 </nav>
+</div></header>
 
 <main>
 <section class="hero"><div class="w">
 <div>
-<p class="kicker">Local plumbers, Hartsfield &amp; nearby villages</p>
-<h1>Leak, blockage or no hot water? <b>We turn up when we say we will.</b></h1>
+<p class="eyebrow">Gas Safe registered plumbers in Hartsfield &amp; nearby villages</p>
+<h1>Leak, blockage or no hot water? We turn up when we say we will.</h1>
 <p class="lead">Repairs, boiler servicing and bathroom installs, with a fixed price agreed before any work starts.</p>
-<div class="acts"><a class="btn" href="tel:01632960418">Call 01632 960418</a><a class="lnk" href="#contact">Or ask for a free quote</a></div>
+<div class="acts"><a class="btn" href="tel:01632960418">Call now: 01632 960418</a><a class="btn alt" href="#contact">Get a free quote</a></div>
 </div>
-<aside class="promise" aria-labelledby="promise-h">
-<h2 id="promise-h">Our promise to you</h2>
+<aside class="panel" aria-labelledby="why">
+<h2 id="why">Why local households call us</h2>
 <ul>
-<li>Gas Safe registered engineers on every boiler job</li>
-<li>A fixed price, agreed before we start</li>
-<li>Same-day emergency call-outs, 7 days a week</li>
-<li>We tidy up and take the old parts away</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6E6E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Gas Safe registered engineers for every boiler job</span></li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6E6E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Fixed price agreed before we start, no surprises</span></li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6E6E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Same-day emergency call-outs, 7 days a week</span></li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6E6E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>We tidy up and take the old parts away</span></li>
 </ul>
 </aside>
 </div></section>
-
-<section class="sec band" id="services"><div class="w">
-<h2>What we <b>do</b></h2>
+<section class="sec" id="services"><div class="w">
+<h2>What we do</h2>
 <p class="sub">From a dripping tap to a full bathroom, one team handles it.</p>
-<ul class="rows">
-<li><h3>Emergency repairs</h3><p>Burst pipes, leaks and overflowing toilets, sorted the same day.</p></li>
-<li><h3>Boiler servicing &amp; repair</h3><p>Annual services and breakdowns by Gas Safe registered engineers.</p></li>
-<li><h3>Blocked drains</h3><p>Sinks, showers and outside drains cleared without the mess.</p></li>
-<li><h3>Bathroom installs</h3><p>Design, plumbing and tiling, managed start to finish.</p></li>
-<li><h3>Radiators &amp; heating</h3><p>Cold spots, power flushes, new radiators and thermostats.</p></li>
-<li><h3>Landlord safety checks</h3><p>Annual gas safety certificates for rental properties.</p></li>
-</ul>
-</div></section>
-
-<section class="sec" id="process"><div class="w">
-<h2>How it <b>works</b></h2>
-<div class="steps">
-<div><span class="n" aria-hidden="true">1</span><h3>Call or send a photo</h3><p>Tell us what's wrong. A photo often lets us price it straight away.</p></div>
-<div><span class="n" aria-hidden="true">2</span><h3>Agree a fixed price</h3><p>You know the cost before we start. It doesn't change unless you change the job.</p></div>
-<div><span class="n" aria-hidden="true">3</span><h3>Job done, area tidy</h3><p>We test everything, clear up and take old parts away.</p></div>
+<div class="grid">
+<div class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M32 8C25 20 16 28 16 39a16 16 0 0 0 32 0C48 28 39 20 32 8z" fill="#0B6E6E"/></svg></span><h3>Emergency repairs</h3><p>Burst pipes, leaks and overflowing toilets, sorted the same day.</p></div>
+<div class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M32 8C25 20 16 28 16 39a16 16 0 0 0 32 0C48 28 39 20 32 8z" fill="#0B6E6E"/></svg></span><h3>Boiler servicing &amp; repair</h3><p>Annual services and breakdowns by Gas Safe registered engineers.</p></div>
+<div class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M32 8C25 20 16 28 16 39a16 16 0 0 0 32 0C48 28 39 20 32 8z" fill="#0B6E6E"/></svg></span><h3>Blocked drains</h3><p>Sinks, showers and outside drains cleared without the mess.</p></div>
+<div class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M32 8C25 20 16 28 16 39a16 16 0 0 0 32 0C48 28 39 20 32 8z" fill="#0B6E6E"/></svg></span><h3>Bathroom installs</h3><p>Design, plumbing and tiling, managed start to finish.</p></div>
+<div class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M32 8C25 20 16 28 16 39a16 16 0 0 0 32 0C48 28 39 20 32 8z" fill="#0B6E6E"/></svg></span><h3>Radiators &amp; heating</h3><p>Cold spots, power flushes, new radiators and thermostats.</p></div>
+<div class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M32 8C25 20 16 28 16 39a16 16 0 0 0 32 0C48 28 39 20 32 8z" fill="#0B6E6E"/></svg></span><h3>Landlord safety checks</h3><p>Annual gas safety certificates for rental properties.</p></div>
 </div>
 </div></section>
 
-<section class="sec band" id="areas"><div class="w">
-<h2>Areas we <b>cover</b></h2>
+<section class="sec tint" id="process"><div class="w">
+<h2>How it works</h2>
+<div class="grid">
+<div class="step"><span class="n" aria-hidden="true">1</span><div><h3>Call or send a photo</h3><p>Tell us what's wrong. A photo often lets us price it straight away.</p></div></div>
+<div class="step"><span class="n" aria-hidden="true">2</span><div><h3>Agree a fixed price</h3><p>You know the cost before we start. It doesn't change unless you change the job.</p></div></div>
+<div class="step"><span class="n" aria-hidden="true">3</span><div><h3>Job done, area tidy</h3><p>We test everything, clear up and take old parts away.</p></div></div>
+</div>
+</div></section>
+
+<section class="sec" id="areas"><div class="w">
+<h2>Areas we cover</h2>
 <p class="sub">Based in Hartsfield, covering a 15-mile radius.</p>
-<p class="areas"><span>Hartsfield</span><span>Kettlebrook</span><span>Wrenmoor</span><span>Pellingham</span><span>Larkford</span><span>Oakhurst Green</span></p>
+<div class="chips"><span>Hartsfield</span><span>Kettlebrook</span><span>Wrenmoor</span><span>Pellingham</span><span>Larkford</span><span>Oakhurst Green</span></div>
 </div></section>
 
-<section class="sec" id="reviews"><div class="w">
-<h2>What customers <b>say</b></h2>
-<p class="small" style="margin-top:10px">Sample reviews for this fictional concept. A real site would pull these from Google.</p>
-<figure class="quote"><blockquote>"Came out the same evening for a burst pipe and gave us the price before starting."</blockquote><figcaption>Sample customer, Kettlebrook</figcaption></figure>
-<div class="more">
-<figure><blockquote>"Boiler service booked online, engineer arrived on time and explained everything."</blockquote><figcaption>Sample customer, Hartsfield</figcaption></figure>
-<figure><blockquote>"Our new bathroom was finished in the week they said, and the house was left spotless."</blockquote><figcaption>Sample customer, Wrenmoor</figcaption></figure>
+<section class="sec tint" id="reviews"><div class="w">
+<h2>What customers say</h2>
+<p class="small">Sample reviews for this fictional concept. A real site would pull these from Google.</p>
+<div class="grid">
+<figure class="card rev" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><blockquote>"Came out the same evening for a burst pipe and gave us the price before starting."</blockquote><figcaption>Sample customer, Kettlebrook</figcaption></figure>
+<figure class="card rev" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><blockquote>"Boiler service booked online, engineer arrived on time and explained everything."</blockquote><figcaption>Sample customer, Hartsfield</figcaption></figure>
+<figure class="card rev" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><blockquote>"Our new bathroom was finished in the week they said, and the house was left spotless."</blockquote><figcaption>Sample customer, Wrenmoor</figcaption></figure>
 </div>
 </div></section>
 
-<section class="contact" id="contact"><div class="w">
+<section class="contact" id="contact"><div class="w"><div class="box">
 <div>
-<h2>Get a <b>free quote</b></h2>
+<h2>Get a free quote</h2>
 <p>Tell us about the job and we'll reply the same working day. For emergencies, call.</p>
-<a class="ph" href="tel:01632960418">01632 960418</a>
+<a class="tel" href="tel:01632960418">01632 960418</a>
 <p>Mon–Fri 7am–7pm, Sat 8am–4pm<br>Emergency call-outs 7 days</p>
 </div>
 <form>
@@ -171,12 +159,19 @@ footer a{color:#E9DDD0}
 <label for="f-msg">What do you need help with?</label><textarea id="f-msg" rows="3"></textarea>
 <button class="btn" type="button">Send my enquiry</button>
 </form>
-</div></section>
+</div></div></section>
 </main>
 
 <footer><div class="w">
-<span>© 2026 Pell &amp; Wren Plumbing &amp; Heating (fictional)</span>
-<span><a href="#top">Privacy</a> · Concept by Made Ready</span>
+<svg class="logo" viewBox="0 0 300 64" role="img" aria-label="Pell &amp; Wren Plumbing">
+<rect width="64" height="64" rx="14" fill="#0B6E6E"/>
+<path d="M32 10C25 21 17.5 28.5 17.5 38a14.5 14.5 0 0 0 29 0C46.5 28.5 39 21 32 10z" fill="#E6F4F1"/>
+<path d="M24 40h10a4 4 0 0 1 4 4" fill="none" stroke="#B4491F" stroke-width="4" stroke-linecap="round"/>
+<text x="80" y="31" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="25" font-weight="800" fill="#12302F" letter-spacing="-0.4">Pell &amp; Wren</text>
+<text x="81" y="51" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="700" fill="#0B6E6E" letter-spacing="2.6">PLUMBING</text>
+</svg>
+
+<span>© 2026 Pell &amp; Wren Plumbing &amp; Heating (fictional) · <a href="#top">Privacy</a> · Concept by Made Ready</span>
 </div></footer>
 
 </body>
