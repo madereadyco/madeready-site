@@ -112,3 +112,21 @@ dialog iframe{flex:1;width:100%;border:0;background:#fff}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .how h3{margin-top:24px}.how .small{margin-top:6px}
+
+.total{font-size:.85rem;font-weight:700;color:var(--navy);margin-top:6px}
+.plan.pop{order:-1}
+@media(min-width:760px){.plan.pop{order:0;transform:translateY(-10px)}}
+.vs{list-style:none;margin-top:10px}.vs li{padding:6px 0 6px 24px;position:relative;color:var(--mid)}
+.vs li::before{content:"–";position:absolute;left:4px;color:var(--mid)}
+.card.own{border-color:var(--accent);border-width:2px}.card.own .vs li::before{content:"✓";color:var(--accent-ink);font-weight:800}
+.card.own h3{color:var(--accent-ink)}
+#price .facts{max-width:34em}
+.form{max-width:520px;margin:28px auto 0;text-align:left;display:grid;gap:6px}
+.form label{font-weight:700;font-size:.95rem;margin-top:8px;color:#fff}
+.form input:not([type=checkbox]),.form textarea{width:100%;min-height:48px;padding:10px 14px;border-radius:10px;border:2px solid transparent;background:#fff;color:var(--ink);font:inherit}
+.form input:focus-visible,.form textarea:focus-visible{outline:3px solid #FFB27A;outline-offset:2px}
+.form .hp{position:absolute;left:-9999px}
+.form .consent{font-size:.85rem;margin-top:8px}.form .consent a{color:#FFB27A}
+.form .btn{margin-top:12px;width:100%}
+.form .status{min-height:1.4em;font-weight:700;color:#fff}
+.dark .actions{margin-top:20px}
