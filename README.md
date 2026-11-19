@@ -10,7 +10,7 @@ Website for Made Ready: demo-first website redesigns and monthly care plans for 
 - `docs/` – backup of the previous site copy
 
 ## Before going live
-Search for `[£ TBC]`, `[PHOTO]` and  and replace them. Complete `privacy.html`.
+Search for `[PHOTO]` and  and replace them. Complete `privacy.html`.
 
 ## Deploy
 Merging to `main` auto-deploys to Vercel. Use PR preview links to review.
