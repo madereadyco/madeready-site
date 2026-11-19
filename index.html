@@ -43,7 +43,7 @@
 <p class="eyebrow">Websites for UK trades · Leicester</p>
 <h1>Look as good online as your work does.</h1>
 <p class="lede">I build a demo of your new website first, free. You see it on your own phone. If you like it, we launch it and I look after it every month.</p>
-<div class="actions"><a class="btn" href="#contact">Get a free demo of your site</a><a class="btn ghost" href="tel:PHONE_NUMBER_HERE">Call <span class="ph">[PHONE]</span></a></div>
+<div class="actions"><a class="btn" href="#contact">Get a free demo of your site</a><a class="btn ghost" href="tel:+447901972811">Call 07901 972 811</a></div>
 <p class="note">Starting with plumbers and heating engineers. Other trades welcome.</p>
 </div></section>
 
@@ -101,8 +101,12 @@
 <p class="eyebrow">Get in touch</p>
 <h2>Want to see your new site?</h2>
 <p class="lede">Send me your business name and website, or just ring. I'll build you a demo and send you the link.</p>
-<div class="actions"><a class="btn" href="mailto:EMAIL_ADDRESS_HERE?subject=Free%20demo%20of%20my%20new%20website">Email <span class="ph">[EMAIL]</span></a><a class="btn ghost" href="tel:PHONE_NUMBER_HERE">Call <span class="ph">[PHONE]</span></a></div>
+<div class="actions"><a class="btn" id="email-btn" href="#contact" data-u="madeready.co" data-d="gmail.com">Email me</a>
+<noscript><p>Email: madeready.co (at) gmail.com</p></noscript><a class="btn ghost" href="tel:+447901972811">Call 07901 972 811</a></div>
 </div></section>
 </main>
 <footer><div class="wrap"><p>© 2026 Made Ready · Leicester, UK</p><p><a href="/privacy.html">Privacy</a></p></div></footer>
+<script>
+document.querySelectorAll("[data-u]").forEach(function(e){var a=e.dataset.u+"@"+e.dataset.d;if(e.tagName==="A"){e.href="mailto:"+a+"?subject=Free%20demo%20of%20my%20new%20website"}else{e.textContent=a}});
+</script>
 </body></html>
