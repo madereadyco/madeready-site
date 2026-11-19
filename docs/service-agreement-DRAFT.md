@@ -10,9 +10,9 @@ You've chosen the plan below. It starts on **[start date]**.
 
 | Plan | Price per month | Edit minutes per month | Reply time |
 | --- | --- | --- | --- |
-| Essential | £45 | None | Within 5 working days |
-| Standard | £75 | 30 | Within 3 working days |
-| Premium | £120 | 90 | Priority, within 2 working days |
+| Essential | £45 | None | Within 3 working days |
+| Standard | £75 | 30 | Within 2 working days |
+| Premium | £120 | 90 | Priority, within 1 working day |
 
 Selected plan: **[Essential / Standard / Premium]**
 
