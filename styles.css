@@ -14,7 +14,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,249,240,.96);border-
 nav ul{display:none;list-style:none;gap:24px}
 nav a{text-decoration:none;font-weight:600;font-size:.95rem}
 nav a:hover{color:var(--accent-ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;border:2px solid var(--accent);font-size:1rem;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;background:#DC5200;color:#fff;font-weight:800;text-decoration:none;border:2px solid var(--accent);font-size:1rem;cursor:pointer}
 .btn:hover{background:var(--accent-ink);border-color:var(--accent)}
 .btn.ghost{background:transparent;color:inherit;border-color:var(--accent)}
 .btn.ghost:hover{background:rgba(127,127,127,.12);border-color:var(--accent)}

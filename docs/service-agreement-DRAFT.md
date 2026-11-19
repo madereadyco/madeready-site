@@ -28,7 +28,7 @@ No VAT is added. **[Roland: confirm you are not VAT registered. Update if that c
 
 ## 3. Edits
 
-- Send requests by email, or through the contact form. There is no phone support.
+- Send requests by email only. There is no phone support.
 - I do edits in a weekly batch.
 - Unused edit minutes don't carry over to the next month.
 - Extra edits, beyond your plan, are charged at **[£ per hour]**. I'll tell you the cost before I start.
@@ -88,5 +88,4 @@ I'll handle your information as set out in my privacy notice. **[Roland: complet
 
 - Before taking any money, make sure your Cromwell outside-work approval is sorted.
 - Check the liability cap and exclusions with a solicitor, and check whether your insurance covers this work.
-- The site says "use the contact form", but the site currently has no contact form. Either add one or change the wording here and on the site.
 - Terms page on the site: `terms.html` (marked draft, set to noindex).
