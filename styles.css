@@ -11,10 +11,10 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
 .logo{display:flex;align-items:center;gap:6px;font-weight:800;text-decoration:none;color:var(--ink);font-size:1.05rem}
 .logo svg{color:var(--accent);overflow:visible}
-.logo .mk{transform-box:fill-box;transform-origin:50% 100%;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
-.logo .mk-small{transition-delay:.05s}
-.logo:hover .mk-small,.logo:focus-visible .mk-small{transform:translate(-12%,-14%) rotate(-6deg)}
-.logo:hover .mk-big,.logo:focus-visible .mk-big{transform:translate(3%,-7%) scale(1.04)}
+.logo .mk{transform-box:fill-box;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.logo .mk-small{transform-origin:0% 100%;transition-delay:.05s}
+.logo .mk-big{transform-origin:100% 100%}
+.logo:hover .mk,.logo:focus-visible .mk{transform:scale(1.07)}
 @media(prefers-reduced-motion:reduce){.logo .mk{transition:none}.logo:hover .mk,.logo:focus-visible .mk{transform:none}}
 nav ul{display:none;list-style:none;gap:24px}
 nav a{text-decoration:none;font-weight:600;font-size:.95rem}
