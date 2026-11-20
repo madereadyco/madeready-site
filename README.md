@@ -6,6 +6,8 @@ Website for Made Ready: demo-first website redesigns and monthly care plans (Ess
 
 ## Files
 - `index.html` – home page: how it works, care plan tiers, About, FAQ (including how to cancel), contact
+- `websites-for-plumbers-leicester/`, `care-plan/`, `website-cost-for-trades/`, `faq/` – search-friendly pages (each is `index.html` in its folder, with FAQ/breadcrumb schema)
+- `sitemap.xml`, `robots.txt` – add new public pages to the sitemap
 - `terms.html` – care plan terms (DRAFT, noindex, needs checking before use)
 - `privacy.html` – privacy notice (DRAFT STUB, must be completed)
 - `styles.css` – all styles

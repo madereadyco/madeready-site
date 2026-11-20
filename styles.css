@@ -131,3 +131,8 @@ dialog iframe{flex:1;width:100%;border:0;background:#fff}
 .form .status{min-height:1.4em;font-weight:700;color:#fff}
 .dark .actions{margin-top:20px}
 .card .price-fig{color:var(--accent-ink);font-size:1.6rem;font-weight:800;margin:2px 0 10px;line-height:1.1}
+
+.crumbs{font-size:.85rem;color:var(--mid);margin-bottom:14px}.crumbs a{color:var(--accent-ink)}
+.h1s{font-size:clamp(2rem,7vw,3.2rem)}
+.note a,.small a,.lede a{color:var(--accent-ink)}
+.wrap>details:first-of-type{margin-top:24px}
