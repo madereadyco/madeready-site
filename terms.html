@@ -47,8 +47,9 @@
     -18 0 -47 -10 -65 -22z"/>
     </g>
 </svg></a>
-<nav aria-label="Primary"><ul><li><a href="/#how">How it works</a></li><li><a href="/#included">What you get</a></li><li><a href="/#care">Care plan</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
+<nav aria-label="Primary" id="site-menu"><ul><li><a href="/#how">How it works</a></li><li><a href="/#included">What you get</a></li><li><a href="/#care">Care plan</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
 <a class="btn sm" href="/#contact">Get a free demo</a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>
 </div></header>
 
 <main id="main" class="legal"><div class="wrap">
@@ -98,4 +99,5 @@
 <script>
 document.querySelectorAll("[data-u]").forEach(function(e){var a=e.dataset.u+"@"+e.dataset.d;if(e.tagName==="A"){e.href="mailto:"+a+"?subject=Free%20demo%20of%20my%20new%20website"}else{e.textContent=a}});
 </script>
+<script src="/nav.js" defer></script>
 </body></html>
