@@ -2,7 +2,7 @@
 
 Live site: **[www.madeready.co](https://www.madeready.co)**
 
-Website for Made Ready: demo-first website redesigns and monthly care plans (Essential £45, Standard £75, Premium £120) for small UK trades. Plain HTML and CSS, no build step. The only JavaScript is a few small inline scripts (the example modal, email address assembly and the contact form).
+Website for Made Ready: demo-first website redesigns and monthly care plans (Essential £45, Standard £75, Premium £120) for small UK trades. Plain HTML and CSS, no build step. JavaScript is kept small: a few inline scripts (the example modal, email address assembly and the contact form) and `nav.js` (the mobile menu).
 
 ## Files
 - `index.html` – home page: how it works, care plan tiers, About, FAQ (including how to cancel), contact
@@ -10,6 +10,7 @@ Website for Made Ready: demo-first website redesigns and monthly care plans (Ess
 - `sitemap.xml`, `robots.txt` – add new public pages to the sitemap
 - `terms.html` – care plan terms (DRAFT, noindex, needs checking before use)
 - `privacy.html` – privacy notice (DRAFT STUB, must be completed)
+- `nav.js` – mobile header menu (button, Escape, focus, closes on link tap); links show as a plain row if JS is off
 - `styles.css` – all styles
 - `site.webmanifest`, `images/` – favicons and icons
 - `example/` – fictional "Pell & Wren" plumber concept (noindex)

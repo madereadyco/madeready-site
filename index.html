@@ -47,8 +47,9 @@
     -18 0 -47 -10 -65 -22z"/>
     </g>
 </svg></a>
-<nav aria-label="Primary"><ul><li><a href="/#how">How it works</a></li><li><a href="/#included">What you get</a></li><li><a href="/#care">Care plan</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
+<nav aria-label="Primary" id="site-menu"><ul><li><a href="/#how">How it works</a></li><li><a href="/#included">What you get</a></li><li><a href="/#care">Care plan</a></li><li><a href="/#faq">FAQ</a></li></ul></nav>
 <a class="btn sm" href="/#contact">Get a free demo</a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>
 </div></header>
 
 <main id="main">
@@ -244,4 +245,5 @@ else{throw new Error()}})
 .finally(function(){b.disabled=false});
 });})();
 </script>
+<script src="/nav.js" defer></script>
 </body></html>

@@ -16,7 +16,33 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-
 .logo .mk-big{transform-origin:100% 100%}
 .logo:hover .mk,.logo:focus-visible .mk{transform:scale(1.07)}
 @media(prefers-reduced-motion:reduce){.logo .mk{transition:none}.logo:hover .mk,.logo:focus-visible .mk{transform:none}}
-nav ul{display:none;list-style:none;gap:24px}
+nav ul{list-style:none;gap:24px}
+.menu-toggle{display:none;width:44px;height:44px;flex:none;align-items:center;justify-content:center;background:transparent;border:2px solid var(--rule);border-radius:12px;color:var(--ink);cursor:pointer;padding:0}
+.menu-toggle:hover{border-color:var(--accent)}
+.bars,.bars::before,.bars::after{display:block;width:20px;height:2px;background:currentColor;border-radius:2px;transition:transform .2s,opacity .2s}
+.bars{position:relative}.bars::before,.bars::after{content:"";position:absolute;left:0}
+.bars::before{top:-6px}.bars::after{top:6px}
+.menu-toggle[aria-expanded=true] .bars{background:transparent}
+.menu-toggle[aria-expanded=true] .bars::before{top:0;transform:rotate(45deg)}
+.menu-toggle[aria-expanded=true] .bars::after{top:0;transform:rotate(-45deg)}
+@media(prefers-reduced-motion:reduce){.bars,.bars::before,.bars::after{transition:none}}
+/* Phones: links live in a menu opened by the button; the CTA stays visible. */
+@media(max-width:759.98px){
+ .bar{flex-wrap:wrap}
+ .bar .btn.sm{margin-left:auto;white-space:nowrap}
+ nav{order:5;flex-basis:100%}
+ nav ul{display:flex;flex-wrap:wrap;gap:0 20px;padding-bottom:10px}
+ nav a{display:inline-flex;align-items:center;min-height:44px}
+ .js .menu-toggle{display:inline-flex}
+ .js .bar{flex-wrap:nowrap}
+ .js nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--rule);box-shadow:0 8px 16px rgba(26,18,8,.08);max-height:calc(100dvh - 64px);overflow:auto}
+ .js nav.open{display:block}
+ .js nav ul{display:block;width:min(1080px,100% - 32px);margin-inline:auto;padding:8px 0 12px}
+ .js nav li+li{border-top:1px solid var(--rule)}
+ .js nav a{display:flex;min-height:48px;font-size:1.05rem}
+ .logo{white-space:nowrap}
+}
+@media(max-width:389.98px){.bar{gap:8px}.bar .btn.sm{padding:8px 12px;font-size:.88rem}.logo{font-size:.95rem}.logo svg{width:28px}}
 nav a{text-decoration:none;font-weight:600;font-size:.95rem}
 nav a:hover{color:var(--accent-ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;background:#CE4C00;color:#fff;font-weight:800;text-decoration:none;border:2px solid var(--accent);font-size:1rem;cursor:pointer}
