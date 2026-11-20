@@ -112,7 +112,7 @@ dialog iframe{flex:1;width:100%;border:0;background:#fff}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-.how h3{margin-top:24px}.how .small{margin-top:6px}
+.how h3{margin-top:24px}.how .small{margin-top:6px}.hsum{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}.hsum li{color:var(--mid);line-height:1.5}.hsum b{color:var(--ink,inherit)}.hmore{margin-top:14px}.hmore summary{min-height:48px;padding:12px 20px}
 
 .total{font-size:.85rem;font-weight:700;color:var(--navy);margin-top:6px}
 .plan.pop{order:-1}
