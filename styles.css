@@ -113,3 +113,5 @@ dialog iframe{flex:1;width:100%;border:0;background:#fff}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .how h3{margin-top:24px}.how .small{margin-top:6px}
+
+.card .price-fig{color:var(--accent-ink);font-size:1.6rem;font-weight:800;margin:2px 0 10px;line-height:1.1}
