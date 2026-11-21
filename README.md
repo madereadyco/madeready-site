@@ -30,3 +30,8 @@ The form in `index.html` posts to [Web3Forms](https://web3forms.com) (no backend
 
 ## Deploy
 Merging to `main` auto-deploys to Vercel. Use PR preview links to review.
+
+## Hidden from search (temporary)
+Until launch, every page is hidden from search engines: a `<meta name="robots" content="noindex, nofollow">` tag (marked `TEMP-NOINDEX`) on each public page, plus an `X-Robots-Tag: noindex, nofollow` header in `vercel.json`. Do not add a `Disallow` line to `robots.txt`: crawlers must be able to fetch pages to see the noindex.
+
+**To go live in search:** delete the `vercel.json` header block (or the file), remove the `TEMP-NOINDEX` meta line from `index.html`, `privacy.html` and the four search pages (`grep -rn TEMP-NOINDEX .`), then in Google Search Console request indexing for the home page and submit `sitemap.xml`. `terms.html` and `example/` are meant to stay noindex.
