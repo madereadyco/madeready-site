@@ -150,8 +150,8 @@ dialog iframe{flex:1;width:100%;border:0;background:#fff}
 .form[hidden]{display:none}
 .form{max-width:520px;margin:28px auto 0;text-align:left;display:grid;gap:6px}
 .form label{font-weight:700;font-size:.95rem;margin-top:8px;color:#fff}
-.form input:not([type=checkbox]),.form textarea{width:100%;min-height:48px;padding:10px 14px;border-radius:10px;border:2px solid transparent;background:#fff;color:var(--ink);font:inherit}
-.form input:focus-visible,.form textarea:focus-visible{outline:3px solid var(--accent-on-dark);outline-offset:2px}
+.form input:not([type=checkbox]),.form textarea,.form select{width:100%;min-height:48px;padding:10px 14px;border-radius:10px;border:2px solid transparent;background:#fff;color:var(--ink);font:inherit}
+.form input:focus-visible,.form textarea:focus-visible,.form select:focus-visible{outline:3px solid var(--accent-on-dark);outline-offset:2px}
 .form .hp{position:absolute;left:-9999px}
 .form .consent{font-size:.85rem;margin-top:8px}.form .consent a{color:var(--accent-on-dark)}
 .form .btn{margin-top:12px;width:100%}
@@ -163,3 +163,9 @@ dialog iframe{flex:1;width:100%;border:0;background:#fff}
 .h1s{font-size:clamp(2rem,7vw,3.2rem)}
 .note a,.small a,.lede a{color:var(--accent-ink)}
 .wrap>details:first-of-type{margin-top:24px}
+
+.gets{list-style:none;margin-top:28px;display:grid;gap:0 48px}
+.gets li{padding:18px 0;border-top:1px solid var(--rule)}
+.gets p{color:var(--mid)}
+@media(min-width:760px){.gets{grid-template-columns:1fr 1fr}}
+footer a{display:inline-block;padding:12px 4px}
